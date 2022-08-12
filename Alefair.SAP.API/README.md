@@ -1,6 +1,6 @@
 # Alefair.SAP.API
 
-<div>SAP API based by <p style="color: darkblue;"><i>Interop.SAPFEWSELib.dll</i></p> and <i>Interop.SapROTWr.dll</i></div>
+<div class="alert alert-info">SAP API based by <i>Interop.SAPFEWSELib.dll</i> and <i>Interop.SapROTWr.dll</i></div>
 
 ## Methods:
 
