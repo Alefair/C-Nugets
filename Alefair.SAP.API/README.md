@@ -30,6 +30,9 @@
 
 ## Examples
 
+
+### *class* **SAPAPI**
+
 ```csharp
 /// Init SAPAPI object, The sap should open if exist
 ///
