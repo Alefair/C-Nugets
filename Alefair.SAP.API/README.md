@@ -4,7 +4,7 @@
 
 ## Methods:
 
-*class* **SAPAPI**
+[*class* **SAPAPI**](#class-sapapi)
 - [GetConnections](#GetConnections)
 - [GetSessions](#GetSessions)
 - [Connect](#Connect)
