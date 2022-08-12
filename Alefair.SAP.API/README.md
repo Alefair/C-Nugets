@@ -24,7 +24,6 @@
 
 [*class* **EXTENSION**](#class-extension)
 - [SelectorType](#SelectorType)
-- [OpenTransaction](#OpenTransaction)
 
 
 ## Examples
