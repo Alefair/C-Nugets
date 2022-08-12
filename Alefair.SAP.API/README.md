@@ -1,6 +1,6 @@
 # Alefair.SAP.API
 
-<div class="alert alert-info">SAP API based by <i>Interop.SAPFEWSELib.dll</i> and <i>Interop.SapROTWr.dll</i></div>
+> SAP API based by *Interop.SAPFEWSELib.dll*and *Interop.SapROTWr.dll*
 
 ## Methods:
 
@@ -37,7 +37,7 @@ SAPAPI gui = new SAPIPI();
 ```
 
 
-<div id="GetConnections">GetConnections</div>
+#### GetConnections
 
 ```csharp
 /// Method gets a Dictionary of open connections
