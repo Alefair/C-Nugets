@@ -1,4 +1,4 @@
-# Alefair.SAP.API
+![image description](relative/path/in/repository/to/image.svg) #Alefair.SAP.API
 
 <code>SAP API based by *Interop.SAPFEWSELib.dll*  and  *Interop.SapROTWr.dll*</code>
 
