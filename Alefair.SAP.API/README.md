@@ -5,7 +5,7 @@
 SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
 ```
 
->Current version **[1.0.2](https://github.com/Alefair/C-Nugets/blob/main/Alefair.SAP.API/Packages/Alefair.SAP.API.1.0.2.nupkg)**
+>Current version **[1.0.3](https://github.com/Alefair/C-Nugets/blob/main/Alefair.SAP.API/Packages/Alefair.SAP.API.1.0.3.nupkg)**
 
 ## [*class* **SAPAPI**](#SAPAPI)
 
@@ -58,15 +58,22 @@ SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
 <hr>
 
 
-### *class* **SAPAPI**
+### **SAPAPI**
 
 ```csharp
 /// Init SAPAPI object, The sap should open if exist
 ///
-SAPAPI gui = new SAPIPI();
-```
-[back |](#Methods)
+SAPAPI gui = new SAPAPI(string path = @"C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe", int timeout = 2000, bool logging = false)
 
+-> SAPAPI gui  { LogDateFormat="MM/dd/yyyy HH:mm:ss.fff", Logging=true, PID=84404 }
+```
+[back |](#class-sapapi)
+
+
+```csharp
+/// Init SAPAPI object, The sap should open if exist
+///
+gui.
 
 
 #### GetConnections
