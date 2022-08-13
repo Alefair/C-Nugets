@@ -28,6 +28,8 @@
 
 [*class* **EXTENSION**](#class-extension)
 - [SelectorType](#SelectorType)
+- [GetTitle](#GetTitle)(added 1.0.2)
+- [GetStatus](#GetStatus)(added 1.0.2)
 
 
 ## Examples
@@ -90,8 +92,8 @@ object connection = gui.Connect(string Login, SecureString Pswd, string Basename
 #### CloseConnection
 
 ```csharp
-/// Method closes an open connection
-/// by connection           - Conn:connection(-s)
+/// Method closes an open connection(-s)
+/// by connection           - Conn:connection
 /// by id                   - Id:"/app/con[0]"
 /// by number of connection - Child:0
 /// close all connections   - All:true
@@ -113,17 +115,18 @@ gui.CloseConnection(object Conn = null, string Id = "", int Child = -1, bool All
 #### CloseSession
 
 ```csharp
-/// Method closes an open connection
-/// by connection           - Conn:connection(-s)
-/// by id                   - Id:"/app/con[0]"
-/// by number of connection - Child:0
-/// close all connections   - All:true
+/// Method closes an open session(-s)
+/// by connection, session           - Conn:connection, Sess:session
+/// by id                            - Id:"/app/con[0]"
+/// by connection, number of session - Conn:connection, Child:0
+/// close all session                - All:true
 ///
 gui.CloseSession(object Conn = null, object Sess = null, string Id = "", int Child = -1, bool All = false);
 
-///gui.CloseSession(connection);
-///gui.CloseSession(Id:id_conn);
-///gui.CloseSession(Child:child_conn);
+///gui.CloseSession(connection, session);
+///gui.CloseSession(Id:id_sess);
+///gui.CloseSession(connection, Child:child_sess);
+///gui.CloseSession(connection, All:true);
 ///gui.CloseSession(All:true);
 
 -> 
@@ -136,7 +139,7 @@ gui.CloseSession(object Conn = null, object Sess = null, string Id = "", int Chi
 ```csharp
 /// Method creates a new session from the connection
 /// 
-GuiSession session = gui.CreateSession(GuiConnection conn = null);
+object session = gui.CreateSession(object Conn = null);
 
 -> session <COMObject <unknown>>
 ```
@@ -149,7 +152,7 @@ GuiSession session = gui.CreateSession(GuiConnection conn = null);
 ```csharp
 /// Method gives the instance of the GuiConnection object by ID
 /// 
-GuiConnection connection = gui.GetConnection(int connNumber = 0);
+object connection = gui.GetConnection(int connNumber = 0);
 
 -> connection <COMObject <unknown>>
 ```
@@ -162,7 +165,7 @@ GuiConnection connection = gui.GetConnection(int connNumber = 0);
 ```csharp
 /// Method gives the instance of the GuiSession object by ID and connection
 /// 
-GuiSession session = gui.GetSession(GuiConnection conn, int sessNumber = 0);
+object session = gui.GetSession(object Conn, int SessNumber = 0);
 
 -> session <COMObject <unknown>>
 ```
@@ -269,8 +272,34 @@ DataTable dtClone = tbl.OnlyColumns(ColumnsType clmntype = ColumnsType.type_defa
 #### SelectorType
 
 ```csharp
+/// Method gets a type name of GuiComponent
+///
 string selectortype = session.SelectorType("wnd[0]/usr/cntlGRID1/shellcont/shell");
 
 -> selectortype = "GuiGridView"
+```
+[back |](#Methods)
+
+
+
+
+#### GetTitle
+/// Method gets a title window
+```csharp
+string title = session.GetTitle();
+
+-> title = "Transaction Name"
+```
+[back |](#Methods)
+
+
+
+
+#### GetStatus
+/// Method gets a text from Status Bar
+```csharp
+string status = session.GetStatus();
+
+-> status = "Current status"
 ```
 [back |](#Methods)
