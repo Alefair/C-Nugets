@@ -1,7 +1,5 @@
-<div>
-  <img src="https://raw.githubusercontent.com/Alefair/C-Nugets/main/Alefair.SAP.API/Images/saplogo_nuget.png" width="128"/>
-  <h1>Alefair.SAP.API</h1>
-</div>
+[logo](https://raw.githubusercontent.com/Alefair/C-Nugets/main/Alefair.SAP.API/Images/saplogo_nuget.png)
+# Alefair.SAP.API
 
 ```
 SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
@@ -9,20 +7,25 @@ SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
 
 >Current version **[1.0.2](https://github.com/Alefair/C-Nugets/blob/main/Alefair.SAP.API/Packages/Alefair.SAP.API.1.0.2.nupkg)**
 
+## [*class* **SAPAPI**](#class-sapapi)
 
+### Properties
+(added 1.0.3)
+- [LogDateFormat](LogDateFormat)
+- [Logging](Logging)
+- [PID](PID)
 
-## Methods:
-
-[*class* **SAPAPI**](#class-sapapi)
-- [GetConnections](#GetConnections)
-- [GetSessions](#GetSessions)
-- [Connect](#Connect)
+### Methods:
+- [CheckSAP](#CheckSAP)
 - [CloseConnection](#CloseConnection)
 - [CloseSession](#CloseSession)
+- [Connect](#Connect)
 - [CreateSession](#CreateSession)
 - [GetConnection](#GetConnection)
+- [GetConnections](#GetConnections)
 - [GetSession](#GetSession)
-- [CheckSAP](#CheckSAP)
+- [GetSessions](#GetSessions)
+
 
 
 [*class* **SAPTABLE**](#class-saptable)
