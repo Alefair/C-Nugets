@@ -7,7 +7,7 @@ SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
 
 >Current version **[1.0.2](https://github.com/Alefair/C-Nugets/blob/main/Alefair.SAP.API/Packages/Alefair.SAP.API.1.0.2.nupkg)**
 
-## [*class* **SAPAPI**](#class-sapapi)
+## [*class* **SAPAPI**](#SAPAPI)
 
 ### Properties
 (added 1.0.3)
@@ -28,19 +28,34 @@ SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
 
 
 
-[*class* **SAPTABLE**](#class-saptable)
-- [ExtractTable](#ExtractTable)
+## [*class* **SAPTABLE**](#SAPTABLE)
+
+### Properties
+(added 1.0.3)
+- [ColumnsCount](#ColumnsCount)
+- [DefaultColumnName](#DefaultColumnName)
+- [DefaultSuffixColumnName](#DefaultSuffixColumnName)
+- [GuiTable](#GuiTable)
+- [Id](#Id)
+- [RowsCount](#RowsCount)
+
+
+### Methods:
 - [ExtractFirstVisibleRows](#ExtractFirstVisibleRows)
+- [ExtractTable](#ExtractTable)
+- [GetTechNamesColumns](#GetTechNamesColumns)
 - [OnlyColumns](#OnlyColumns)
 
 
-[*class* **EXTENSION**](#class-extension)
+## [*class* **EXTENSION**](#EXTENSION)
+
+### Methods:
 - [SelectorType](#SelectorType)
 - [GetTitle](#GetTitle)  (added 1.0.2)
 - [GetStatus](#GetStatus)  (added 1.0.2)
 
 
-## Examples
+<hr>
 
 
 ### *class* **SAPAPI**
