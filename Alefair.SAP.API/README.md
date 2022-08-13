@@ -28,8 +28,8 @@
 
 [*class* **EXTENSION**](#class-extension)
 - [SelectorType](#SelectorType)
-- [GetTitle](#GetTitle)(added 1.0.2)
-- [GetStatus](#GetStatus)(added 1.0.2)
+- [GetTitle](#GetTitle)  (added 1.0.2)
+- [GetStatus](#GetStatus)  (added 1.0.2)
 
 
 ## Examples
@@ -284,8 +284,9 @@ string selectortype = session.SelectorType("wnd[0]/usr/cntlGRID1/shellcont/shell
 
 
 #### GetTitle
-/// Method gets a title window
+
 ```csharp
+/// Method gets a title window
 string title = session.GetTitle();
 
 -> title = "Transaction Name"
@@ -296,8 +297,9 @@ string title = session.GetTitle();
 
 
 #### GetStatus
-/// Method gets a text from Status Bar
+
 ```csharp
+/// Method gets a text from Status Bar
 string status = session.GetStatus();
 
 -> status = "Current status"
