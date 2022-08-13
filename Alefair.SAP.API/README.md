@@ -1,6 +1,10 @@
 # Alefair.SAP.API
 
-> SAP API based by *Interop.SAPFEWSELib.dll*and *Interop.SapROTWr.dll*
+<code>SAP API based by *Interop.SAPFEWSELib.dll*and *Interop.SapROTWr.dll*</code>
+
+>Current version **1.0.2**
+
+
 
 ## Methods:
 
@@ -75,7 +79,7 @@ Dictionary<string, object> sessions = gui.GetSessions();
 ```csharp
 /// Method create new Connection of GuiConnection object with username, password and base name
 ///
-GuiConnection connection = gui.Create(string login, SecureString pswd, string basename);
+object connection = gui.Connect(string Login, SecureString Pswd, string Basename);
 
 -> connection <COMObject <unknown>>
 ```
@@ -87,22 +91,44 @@ GuiConnection connection = gui.Create(string login, SecureString pswd, string ba
 
 ```csharp
 /// Method closes an open connection
-/// by connection           - conn:connection(-s)
-/// by id                   - id:"/app/con[0]"
-/// by number of connection - child:0
-/// close all connections   - all:true
+/// by connection           - Conn:connection(-s)
+/// by id                   - Id:"/app/con[0]"
+/// by number of connection - Child:0
+/// close all connections   - All:true
 ///
-gui.CloseConnection(GuiConnection conn = null, string id = "", int child = -1, bool all = false);
+gui.CloseConnection(object Conn = null, string Id = "", int Child = -1, bool All = false);
 
 ///gui.CloseConnection(connection);
-///gui.CloseConnection(id:id_conn);
-///gui.CloseConnection(child:child_conn);
-///gui.CloseConnection(all:true);
+///gui.CloseConnection(Id:id_conn);
+///gui.CloseConnection(Child:child_conn);
+///gui.CloseConnection(All:true);
 
 -> 
 ```
 [back |](#Methods)
 
+
+
+
+#### CloseSession
+
+```csharp
+/// Method closes an open connection
+/// by connection           - Conn:connection(-s)
+/// by id                   - Id:"/app/con[0]"
+/// by number of connection - Child:0
+/// close all connections   - All:true
+///
+gui.CloseSession(object Conn = null, object Sess = null, string Id = "", int Child = -1, bool All = false);
+
+///gui.CloseSession(connection);
+///gui.CloseSession(Id:id_conn);
+///gui.CloseSession(Child:child_conn);
+///gui.CloseSession(All:true);
+
+-> 
+```
+[back |](#Methods)
 
 
 #### CreateSession
