@@ -2,7 +2,7 @@
 
 <code>SAP API based by *Interop.SAPFEWSELib.dll*and *Interop.SapROTWr.dll*</code>
 
->Current version **1.0.2**
+>Current version **[1.0.2](https://github.com/Alefair/C-Nugets/blob/main/Alefair.SAP.API/Packages/Alefair.SAP.API.1.0.2.nupkg)**
 
 
 
