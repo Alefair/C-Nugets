@@ -59,6 +59,7 @@ SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
 
 
 ### **SAPAPI**
+--class--
 
 ```csharp
 /// Init SAPAPI object, The sap should open if exist
@@ -70,10 +71,40 @@ SAPAPI gui = new SAPAPI(string path = @"C:\Program Files (x86)\SAP\FrontEnd\SAPg
 [back |](#class-sapapi)
 
 
+#### **LogDateFormat**
+--property--
+
 ```csharp
-/// Init SAPAPI object, The sap should open if exist
-///
-gui.
+/// DateTime format for logging
+/// gui.LogDateFormat {get; set;}
+Console.WriteLine(gui.LogDateFormat) -> "MM/dd/yyyy HH:mm:ss.fff"
+gui.LogDateFormat = "dd.MM.yyyy HH:mm:ss.fff"
+```
+[back |](#class-sapapi)
+
+
+#### **Logging**
+--property--
+
+```csharp
+/// Disable/Enable Logging for SAPAPI class
+/// gui.Logging {get; set;}
+Console.WriteLine(gui.Logging) -> false
+gui.Logging = true
+```
+[back |](#class-sapapi)
+
+
+#### **PID**
+--property--
+
+```csharp
+/// Gets current instance of running Saplogon
+/// gui.PID {get;}
+Console.WriteLine(gui.PID) -> 84404
+```
+[back |](#class-sapapi)
+
 
 
 #### GetConnections
