@@ -346,7 +346,7 @@ Console.WriteLine(tbl.RowsCount; -> 320
 ```
 [back |](#class-saptable)
 
---------------------------------------------------------
+
 
 #### ExtractTable
 --Method--
