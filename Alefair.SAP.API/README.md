@@ -55,7 +55,7 @@ SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
 - [GetStatus](#GetStatus)  (added 1.0.2)
 
 
-<hr>
+***
 
 
 ### **SAPAPI**
@@ -255,7 +255,7 @@ gui.CheckSAP();
 [back |](#class-sapapi)
 
 
-<hr>
+***
 
 ### **SAPTABLE**
 --class--
@@ -441,7 +441,7 @@ DataTable dtClone = tbl.OnlyColumns(ColumnNameType clmntype = ColumnNameType.DEF
 [back |](#class-saptable)
 
 
-<hr>
+***
 
 
 ### **EXTENSION**
