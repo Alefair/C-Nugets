@@ -255,7 +255,7 @@ gui.CheckSAP();
 [back |](#class-sapapi)
 
 
-
+<hr>
 
 ### **SAPTABLE**
 --class--
@@ -440,6 +440,8 @@ DataTable dtClone = tbl.OnlyColumns(ColumnNameType clmntype = ColumnNameType.DEF
 ```
 [back |](#class-saptable)
 
+
+<hr>
 
 
 ### **EXTENSION**
