@@ -6,6 +6,7 @@ SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
 ```
 
 >Current version **[1.0.3](https://github.com/Alefair/C-Nugets/blob/main/Alefair.SAP.API/Packages/Alefair.SAP.API.1.0.3.nupkg)**
+>[nuget](https://www.nuget.org/packages/Alefair.SAP.API/1.0.3) on https://www.nuget.org
 
 ## [*class* **SAPAPI**](#SAPAPI)
 
