@@ -11,9 +11,9 @@ SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
 
 ### Properties
 (added 1.0.3)
-- [LogDateFormat](LogDateFormat)
-- [Logging](Logging)
-- [PID](PID)
+- [LogDateFormat](#LogDateFormat)
+- [Logging](#Logging)
+- [PID](#PID)
 
 ### Methods:
 - [CheckSAP](#CheckSAP)
@@ -118,7 +118,7 @@ Dictionary<string, object> connections = gui.GetConnections();
 
 -> connections["/app/con[0]"] = <COMObject <unknown>>
 ```
-[back |](#Methods)
+[back |](#class-sapapi)
 
 
 
@@ -133,7 +133,7 @@ Dictionary<string, object> sessions = gui.GetSessions();
 
 -> sessions["/app/con[0]/ses[0]"] = <COMObject <unknown>>
 ```
-[back |](#Methods)
+[back |](#class-sapapi)
 
 
 
@@ -168,7 +168,7 @@ gui.CloseConnection(object Conn = null, string Id = "", int Child = -1, bool All
 
 -> 
 ```
-[back |](#Methods)
+[back |](#class-sapapi)
 
 
 
@@ -192,7 +192,7 @@ gui.CloseSession(object Conn = null, object Sess = null, string Id = "", int Chi
 
 -> 
 ```
-[back |](#Methods)
+[back |](#class-sapapi)
 
 
 #### CreateSession
@@ -204,7 +204,7 @@ object session = gui.CreateSession(object Conn = null);
 
 -> session <COMObject <unknown>>
 ```
-[back |](#Methods)
+[back |](#class-sapapi)
 
 
 
@@ -217,7 +217,7 @@ object connection = gui.GetConnection(int connNumber = 0);
 
 -> connection <COMObject <unknown>>
 ```
-[back |](#Methods)
+[back |](#class-sapapi)
 
 
 
@@ -230,7 +230,7 @@ object session = gui.GetSession(object Conn, int SessNumber = 0);
 
 -> session <COMObject <unknown>>
 ```
-[back |](#Methods)
+[back |](#class-sapapi)
 
 
 
@@ -243,12 +243,12 @@ gui.CheckSAP();
 
 -> true
 ```
-[back |](#Methods)
+[back |](#class-sapapi)
 
 
 
 
-### *class* **SAPTABLE**
+### **SAPTABLE**
 
 
 ```csharp
@@ -256,7 +256,7 @@ gui.CheckSAP();
 /// selector is an id of GuiGridView table, for example: "wnd[0]/usr/cntlGRID1/shellcont/shell"
 /// autodouble is an option, parse value to double, for example: 0,123- -> double -0.123
 ///
-SAPTABLE tbl = new SAPTABLE(GuiSession session, string selector, bool autodouble = true);
+SAPTABLE tbl = new SAPTABLE(object Session, string Selector, bool Autodouble = true);
 ```
 [back |](#Methods)
 
