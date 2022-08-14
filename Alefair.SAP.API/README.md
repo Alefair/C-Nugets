@@ -77,8 +77,8 @@ SAPAPI gui = new SAPAPI(string path = @"C:\Program Files (x86)\SAP\FrontEnd\SAPg
 ```csharp
 /// DateTime format for logging
 /// gui.LogDateFormat {get; set;}
-Console.WriteLine(gui.LogDateFormat) -> "MM/dd/yyyy HH:mm:ss.fff"
-gui.LogDateFormat = "dd.MM.yyyy HH:mm:ss.fff"
+Console.WriteLine(gui.LogDateFormat); -> "MM/dd/yyyy HH:mm:ss.fff"
+gui.LogDateFormat = "dd.MM.yyyy HH:mm:ss.fff";
 ```
 [back |](#class-sapapi)
 
@@ -89,8 +89,8 @@ gui.LogDateFormat = "dd.MM.yyyy HH:mm:ss.fff"
 ```csharp
 /// Disable/Enable Logging for SAPAPI class
 /// gui.Logging {get; set;}
-Console.WriteLine(gui.Logging) -> false
-gui.Logging = true
+Console.WriteLine(gui.Logging); -> false
+gui.Logging = true;
 ```
 [back |](#class-sapapi)
 
@@ -101,13 +101,14 @@ gui.Logging = true
 ```csharp
 /// Gets current instance of running Saplogon
 /// gui.PID {get;}
-Console.WriteLine(gui.PID) -> 84404
+Console.WriteLine(gui.PID); -> 84404
 ```
 [back |](#class-sapapi)
 
 
 
 #### GetConnections
+--Method--
 
 ```csharp
 /// Method get a Dictionary of open connections
@@ -123,6 +124,7 @@ Dictionary<string, object> connections = gui.GetConnections();
 
 
 #### GetSessions
+--Method--
 
 ```csharp
 /// Method get a Dictionary of open sessions
@@ -138,6 +140,7 @@ Dictionary<string, object> sessions = gui.GetSessions();
 
 
 #### Connect
+--Method--
 
 ```csharp
 /// Method create new Connection of GuiConnection object with username, password and base name
@@ -151,6 +154,7 @@ object connection = gui.Connect(string Login, SecureString Pswd, string Basename
 
 
 #### CloseConnection
+--Method--
 
 ```csharp
 /// Method closes an open connection(-s)
@@ -174,6 +178,7 @@ gui.CloseConnection(object Conn = null, string Id = "", int Child = -1, bool All
 
 
 #### CloseSession
+--Method--
 
 ```csharp
 /// Method closes an open session(-s)
@@ -196,6 +201,7 @@ gui.CloseSession(object Conn = null, object Sess = null, string Id = "", int Chi
 
 
 #### CreateSession
+--Method--
 
 ```csharp
 /// Method creates a new session from the connection
@@ -209,6 +215,7 @@ object session = gui.CreateSession(object Conn = null);
 
 
 #### GetConnection
+--Method--
 
 ```csharp
 /// Method gives the instance of the GuiConnection object by ID
@@ -222,6 +229,7 @@ object connection = gui.GetConnection(int connNumber = 0);
 
 
 #### GetSession
+--Method--
 
 ```csharp
 /// Method gives the instance of the GuiSession object by ID and connection
@@ -235,6 +243,7 @@ object session = gui.GetSession(object Conn, int SessNumber = 0);
 
 
 #### CheckSAP
+--Method--
 
 ```csharp
 /// Method checks whether the Saplogon is running or not
@@ -249,7 +258,7 @@ gui.CheckSAP();
 
 
 ### **SAPTABLE**
-
+--class--
 
 ```csharp
 /// Init SAPTABLE object, read GuiGridView table to DataTable
@@ -258,28 +267,117 @@ gui.CheckSAP();
 ///
 SAPTABLE tbl = new SAPTABLE(object Session, string Selector, bool Autodouble = true);
 ```
-[back |](#Methods)
+[back |](#class-saptable)
 
 
+#### **ColumnsCount**
+--property--
+
+```csharp
+/// Gets columns count
+/// tbl.ColumnsCount {get;}
+Console.WriteLine(tbl.ColumnsCount); -> 52
+```
+[back |](#class-saptable)
+
+
+#### **DefaultColumnName**
+--property--
+
+```csharp
+/// Gets/Sets Default Column Name
+/// tbl.DefaultColumnName {get; set;}
+Console.WriteLine(tbl.DefaultColumnName); -> "Column"
+tbl.DefaultColumnName = "Clmn";
+
+-> {"Clmn_0", "Clmn_1"....}
+```
+[back |](#class-saptable)
+
+
+#### **DefaultSuffixColumnName**
+--property--
+
+```csharp
+/// Gets/Sets suffix default column name
+/// tbl.DefaultSuffixColumnName {get; set;}
+Console.WriteLine(tbl.DefaultSuffixColumnName); -> "_"
+tbl.DefaultColumnName = "-";
+
+-> {"Clmn-0", "Clmn-1"....}
+```
+[back |](#class-saptable)
+
+
+
+#### **GuiTable**
+--property--
+
+```csharp
+/// Gets instance GuiComponent of table 
+/// tbl.GuiTable {get;}
+GuiGridView table = tbl.GuiTable;
+
+-> table <COMObject <unknown>>
+```
+[back |](#class-saptable)
+
+
+
+#### **Id**
+--property--
+
+```csharp
+/// Gets Id of table
+/// tbl.Id {get;}
+Console.WriteLine(tbl.Id); -> wnd[0]/usr/cntlGRID1/shellcont/shell
+
+```
+[back |](#class-saptable)
+
+
+#### **RowsCount**
+--property--
+
+```csharp
+/// Gets rows count
+/// tbl.RowsCount {get;}
+Console.WriteLine(tbl.RowsCount; -> 320
+```
+[back |](#class-saptable)
+
+--------------------------------------------------------
 
 #### ExtractTable
+--Method--
 
 ```csharp
 /// Method gets a DataTable with columns type by default
-/// ColumnsType.type_default -> Column_1, Column_2...
-/// ColumnsType.type_1       -> column name as is
-/// ColumnsType.type_2       -> column name as name in report of sap
-/// ColumnsType.type_3       -> column name as name of tooltip
 ///
+/// [unavailable after 1.0.3] ColumnsType.type_default -> Column_1, Column_2...
+/// [unavailable after 1.0.3] ColumnsType.type_1       -> column name as is
+/// [unavailable after 1.0.3] ColumnsType.type_2       -> column name as name in report of sap
+/// [unavailable after 1.0.3] ColumnsType.type_3       -> column name as name of tooltip
+///
+/// [unavailable after 1.0.3] DataTable table = tbl.ExtractTable(ColumnsType clmntype = ColumnsType.type_default);
+///
+/// ColumnNameType.FULLNAME
+/// ColumnNameType.DISPLAYNAME
+/// ColumnNameType.TOOLTIP
+/// ColumnNameType.TECHNAMES
+/// ColumnNameType.DEFAULT
+
+
 DataTable table = tbl.ExtractTable(ColumnsType clmntype = ColumnsType.type_default);
 
 -> DataTable(){"Column_1", "Column_2"...}
 ```
-[back |](#Methods)
+[back |](#class-saptable)
 
 
 
 #### ExtractFirstVisibleRows
+--Method--
 
 ```csharp
 /// Method gets a List<int> of parameters .FirstVisibleRow
@@ -288,49 +386,68 @@ List<int> fvrc = tbl.ExtractFirstVisibleRows();
 
 -> List<int> {0, 40, 81, 122}
 ```
-[back |](#Methods)
+[back |](#class-saptable)
 
 
 
 #### GetTechNamesColumns
+--Method--
 
 ```csharp
 /// Method gets a DataTable of only tech columns names
 /// Option clmntype gets a real column name
 ///
-/// ColumnsType.type_default -> Column_1, Column_2...
-/// ColumnsType.type_1       -> column name as is
-/// ColumnsType.type_2       -> column name as name in report of sap
-/// ColumnsType.type_3       -> column name as name of tooltip
-DataTable dtTech = tbl.GetTechNamesColumns(ColumnsType clmntype = ColumnsType.type_default);
+/// [unavailable after 1.0.3] ColumnsType.type_default -> Column_1, Column_2...
+/// [unavailable after 1.0.3] ColumnsType.type_1       -> column name as is
+/// [unavailable after 1.0.3] ColumnsType.type_2       -> column name as name in report of sap
+/// [unavailable after 1.0.3] ColumnsType.type_3       -> column name as name of tooltip
+/// [unavailable after 1.0.3] DataTable dtTech = tbl.GetTechNamesColumns(ColumnsType clmntype = ColumnsType.type_default);
+///
+/// ColumnNameType.FULLNAME
+/// ColumnNameType.DISPLAYNAME
+/// ColumnNameType.TOOLTIP
+/// ColumnNameType.TECHNAMES
+/// ColumnNameType.DEFAULT
+
+DataTable dtTech = tbl.GetTechNamesColumns(ColumnNameType clmntype = ColumnNameType.DEFAULT);
 
 -> DataTable() {"Column Number", "Name", "Value"}
 ```
-[back |](#Methods)
+[back |](#class-saptable)
 
 
 
 #### OnlyColumns
+--Method--
 
 ```csharp
 /// Method gets a DataTable of only columns names
-/// ColumnsType.type_default -> Column_1, Column_2...
-/// ColumnsType.type_1       -> column name as is
-/// ColumnsType.type_2       -> column name as name in report of sap
-/// ColumnsType.type_3       -> column name as name of tooltip
-DataTable dtClone = tbl.OnlyColumns(ColumnsType clmntype = ColumnsType.type_default);
+/// [unavailable after 1.0.3] ColumnsType.type_default -> Column_1, Column_2...
+/// [unavailable after 1.0.3] ColumnsType.type_1       -> column name as is
+/// [unavailable after 1.0.3] ColumnsType.type_2       -> column name as name in report of sap
+/// [unavailable after 1.0.3] ColumnsType.type_3       -> column name as name of tooltip
+/// [unavailable after 1.0.3] DataTable dtClone = tbl.OnlyColumns(ColumnsType clmntype = ColumnsType.type_default);
+///
+/// ColumnNameType.FULLNAME
+/// ColumnNameType.DISPLAYNAME
+/// ColumnNameType.TOOLTIP
+/// ColumnNameType.TECHNAMES
+/// ColumnNameType.DEFAULT
+
+DataTable dtClone = tbl.OnlyColumns(ColumnNameType clmntype = ColumnNameType.DEFAULT);
 
 -> DataTable(){"Column_1", "Column_2"...}
 ```
-[back |](#Methods)
+[back |](#class-saptable)
 
 
 
-### *class* **EXTENSION**
-
+### **EXTENSION**
+--class--
 
 
 #### SelectorType
+--Method--
 
 ```csharp
 /// Method gets a type name of GuiComponent
@@ -339,12 +456,13 @@ string selectortype = session.SelectorType("wnd[0]/usr/cntlGRID1/shellcont/shell
 
 -> selectortype = "GuiGridView"
 ```
-[back |](#Methods)
+[back |](#class-extension)
 
 
 
 
 #### GetTitle
+--Method--
 
 ```csharp
 /// Method gets a title window
@@ -352,12 +470,13 @@ string title = session.GetTitle();
 
 -> title = "Transaction Name"
 ```
-[back |](#Methods)
+[back |](#class-extension)
 
 
 
 
 #### GetStatus
+--Method--
 
 ```csharp
 /// Method gets a text from Status Bar
@@ -365,4 +484,4 @@ string status = session.GetStatus();
 
 -> status = "Current status"
 ```
-[back |](#Methods)
+[back |](#class-extension)
