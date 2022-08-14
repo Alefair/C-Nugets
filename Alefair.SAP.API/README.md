@@ -107,7 +107,7 @@ Console.WriteLine(gui.PID); -> 84404
 
 
 
-#### GetConnections
+#### **GetConnections**
 --Method--
 
 ```csharp
@@ -123,7 +123,7 @@ Dictionary<string, object> connections = gui.GetConnections();
 
 
 
-#### GetSessions
+#### **GetSessions**
 --Method--
 
 ```csharp
@@ -139,7 +139,7 @@ Dictionary<string, object> sessions = gui.GetSessions();
 
 
 
-#### Connect
+#### **Connect**
 --Method--
 
 ```csharp
@@ -153,7 +153,7 @@ object connection = gui.Connect(string Login, SecureString Pswd, string Basename
 
 
 
-#### CloseConnection
+#### **CloseConnection**
 --Method--
 
 ```csharp
@@ -177,7 +177,7 @@ gui.CloseConnection(object Conn = null, string Id = "", int Child = -1, bool All
 
 
 
-#### CloseSession
+#### **CloseSession**
 --Method--
 
 ```csharp
@@ -200,7 +200,7 @@ gui.CloseSession(object Conn = null, object Sess = null, string Id = "", int Chi
 [back |](#class-sapapi)
 
 
-#### CreateSession
+#### **CreateSession**
 --Method--
 
 ```csharp
@@ -214,7 +214,7 @@ object session = gui.CreateSession(object Conn = null);
 
 
 
-#### GetConnection
+#### **GetConnection**
 --Method--
 
 ```csharp
@@ -228,7 +228,7 @@ object connection = gui.GetConnection(int connNumber = 0);
 
 
 
-#### GetSession
+#### **GetSession**
 --Method--
 
 ```csharp
@@ -242,7 +242,7 @@ object session = gui.GetSession(object Conn, int SessNumber = 0);
 
 
 
-#### CheckSAP
+#### **CheckSAP**
 --Method--
 
 ```csharp
@@ -348,7 +348,7 @@ Console.WriteLine(tbl.RowsCount; -> 320
 
 
 
-#### ExtractTable
+#### **ExtractTable**
 --Method--
 
 ```csharp
@@ -376,7 +376,7 @@ DataTable table = tbl.ExtractTable(ColumnsType clmntype = ColumnsType.type_defau
 
 
 
-#### ExtractFirstVisibleRows
+#### **ExtractFirstVisibleRows**
 --Method--
 
 ```csharp
@@ -390,7 +390,7 @@ List<int> fvrc = tbl.ExtractFirstVisibleRows();
 
 
 
-#### GetTechNamesColumns
+#### **GetTechNamesColumns**
 --Method--
 
 ```csharp
@@ -417,7 +417,7 @@ DataTable dtTech = tbl.GetTechNamesColumns(ColumnNameType clmntype = ColumnNameT
 
 
 
-#### OnlyColumns
+#### **OnlyColumns**
 --Method--
 
 ```csharp
@@ -448,7 +448,7 @@ DataTable dtClone = tbl.OnlyColumns(ColumnNameType clmntype = ColumnNameType.DEF
 --class--
 
 
-#### SelectorType
+#### **SelectorType**
 --Method--
 
 ```csharp
@@ -463,7 +463,7 @@ string selectortype = session.SelectorType("wnd[0]/usr/cntlGRID1/shellcont/shell
 
 
 
-#### GetTitle
+#### **GetTitle**
 --Method--
 
 ```csharp
@@ -477,7 +477,7 @@ string title = session.GetTitle();
 
 
 
-#### GetStatus
+#### **GetStatus**
 --Method--
 
 ```csharp
