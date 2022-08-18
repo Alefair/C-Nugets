@@ -5,18 +5,24 @@
 SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
 ```
 
->Current version **[1.0.3](https://github.com/Alefair/C-Nugets/blob/main/Alefair.SAP.API/Packages/Alefair.SAP.API.1.0.3.nupkg)**
+>Current version **[1.0.4](https://github.com/Alefair/C-Nugets/blob/main/Alefair.SAP.API/Packages/Alefair.SAP.API.1.0.4.nupkg)**
 >
 
->[nuget](https://www.nuget.org/packages/Alefair.SAP.API/1.0.3) on https://www.nuget.org
+>[nuget](https://www.nuget.org/packages/Alefair.SAP.API/1.0.4) on https://www.nuget.org
 
 ## [*class* **SAPAPI**](#SAPAPI)
 
 ### Properties
+
 (added 1.0.3)
 - [LogDateFormat](#LogDateFormat)
 - [Logging](#Logging)
 - [PID](#PID)
+
+(added 1.0.4)
+- [Application](#Application)
+- [HWND](#HWND)
+- [ProcessName](#ProcessName)
 
 ### Methods:
 - [CheckSAP](#CheckSAP)
@@ -28,6 +34,7 @@ SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
 - [GetConnections](#GetConnections)
 - [GetSession](#GetSession)
 - [GetSessions](#GetSessions)
+- [GetListConnections](#GetListConnections) - Experimental Method
 
 
 
@@ -102,12 +109,46 @@ gui.Logging = true;
 --property--
 
 ```csharp
-/// Gets current instance of running Saplogon
+/// Gets current process id of running Saplogon
 /// gui.PID {get;}
 Console.WriteLine(gui.PID); -> 84404
 ```
 [back |](#class-sapapi)
 
+
+#### **Application**
+--property--
+
+```csharp
+/// Gets current instance application of running Saplogon
+/// gui.Application {get;}
+object app = gui.Application); 
+
+-> app <COMObject <unknown>>
+```
+[back |](#class-sapapi)
+
+
+#### **HWND**
+--property--
+
+```csharp
+/// Gets current window handle
+/// gui.HWND {get;}
+Console.WriteLine(gui.HWND); -> 2178945
+```
+[back |](#class-sapapi)
+
+
+#### **ProcessName**
+--property--
+
+```csharp
+/// Gets current process window title
+/// gui.ProcessName {get;}
+Console.WriteLine(gui.ProcessName); -> "SAP Logon 760"
+```
+[back |](#class-sapapi)
 
 
 #### **GetConnections**
@@ -255,6 +296,26 @@ gui.CheckSAP();
 
 -> true
 ```
+[back |](#class-sapapi)
+
+
+
+#### **GetListConnections**
+--Experimental Method--
+
+```csharp
+/// Method gets list of connections on start page of Saplogon
+/// 
+/// By manual automationId of Table with connections - 1008, automationId of buttons with list - 59410
+/// Support only SAP theme with buttons choice(see screenshot later)
+
+List<string> basenames = GetListConnections(int id = 1008, int btn = 59410);
+
+-> basenames<string> = {"Base Name 1", "Base Name 2"...}
+```
+
+![Choice](https://raw.githubusercontent.com/Alefair/C-Nugets/main/Alefair.SAP.API/Images/Choice.PNG)
+
 [back |](#class-sapapi)
 
 
