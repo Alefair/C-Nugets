@@ -34,7 +34,7 @@ SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
 - [GetConnections](#GetConnections)
 - [GetSession](#GetSession)
 - [GetSessions](#GetSessions)
-- [GetListConnections](#GetListConnections) - Experimental Method
+- [GetListConnections](#GetListConnections) - Experimental Method(added 1.0.4)
 
 
 
