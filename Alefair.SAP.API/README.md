@@ -5,10 +5,10 @@
 SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
 ```
 
->Current version **[1.0.4](https://github.com/Alefair/C-Nugets/blob/main/Alefair.SAP.API/Packages/Alefair.SAP.API.1.0.4.nupkg)**
+>Current version **[1.0.5](https://github.com/Alefair/C-Nugets/blob/main/Alefair.SAP.API/Packages/Alefair.SAP.API.1.0.5.nupkg)**
 >
 
->[nuget](https://www.nuget.org/packages/Alefair.SAP.API/1.0.4) on https://www.nuget.org
+>[nuget](https://www.nuget.org/packages/Alefair.SAP.API/1.0.5) on https://www.nuget.org
 
 ## [*class* **SAPAPI**](#SAPAPI)
 
@@ -63,6 +63,10 @@ SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
 - [SelectorType](#SelectorType)
 - [GetTitle](#GetTitle)  (added 1.0.2)
 - [GetStatus](#GetStatus)  (added 1.0.2)
+- [Click](#Click)  (added 1.0.5)
+- [Focus](#Focus)  (added 1.0.5)
+- [GetText](#GetText)  (added 1.0.5)
+- [SetText](#SetText)  (added 1.0.5)
 
 
 ***
@@ -549,5 +553,76 @@ string title = session.GetTitle();
 string status = session.GetStatus();
 
 -> status = "Current status"
+```
+[back |](#class-extension)
+
+
+
+
+#### **Click**
+--Method--
+
+```csharp
+/// Generate Click Event for GuiComponent
+/// Avaible: GuiButton, GuiCheckBox, GuiRadioButton, GuiShell
+
+session.Click("wnd[0]/tbar[0]/btn[3]")
+
+```
+[back |](#class-extension)
+
+
+
+
+#### **Focus**
+--Method--
+
+```csharp
+/// Generate Focus Event for GuiComponent
+/// Avaible: GuiCTextField, GuiTextField, GuiLabel, GuiShell
+/// For GuiShel Avaible: Select All, Select Column, Select Rows, Select Cell
+
+session.Focus("wnd[0]/usr/ctxtS_VKORG-LOW")
+
+session.Focus("wnd[0]/usr/cntlGRID1/shellcont/shell", TableSelectMethod.SelectCell, "2, SUM_OPEN")
+
+```
+[back |](#class-extension)
+
+
+
+
+
+#### **GetText**
+--Method--
+
+```csharp
+/// Get text from GuiComponent
+/// Avaible GuiShell get text from cell
+
+sResult = session.GetText("wnd[0]/usr/ctxtS_VKORG-LOW")
+-> "control text"
+
+sResult = session.GetText("wnd[0]/usr/ctxtS_VKORG-LOW", "2, SUM_OPEN")
+-> "cell value"
+
+```
+[back |](#class-extension)
+
+
+
+
+
+#### **SetText**
+--Method--
+
+```csharp
+/// Set text of GuiComponent
+/// Avaible GuiShell set text into cell
+
+session.SetText("wnd[0]/usr/ctxtS_VKORG-LOW", "control text")
+
+session.SetText("wnd[0]/usr/ctxtS_VKORG-LOW", "cell value", "2, SUM_OPEN")
+
 ```
 [back |](#class-extension)
