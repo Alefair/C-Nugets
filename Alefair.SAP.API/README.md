@@ -5,10 +5,10 @@
 SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
 ```
 
->Current version **[1.0.5](https://github.com/Alefair/C-Nugets/blob/main/Alefair.SAP.API/Packages/Alefair.SAP.API.1.0.5.nupkg)**
+>Current version **[1.0.6](https://github.com/Alefair/C-Nugets/blob/main/Alefair.SAP.API/Packages/Alefair.SAP.API.1.0.6.nupkg)**
 >
 
->[nuget](https://www.nuget.org/packages/Alefair.SAP.API/1.0.5) on https://www.nuget.org
+>[nuget](https://www.nuget.org/packages/Alefair.SAP.API/1.0.6) on https://www.nuget.org
 
 ## [*class* **SAPAPI**](#SAPAPI)
 
@@ -67,7 +67,7 @@ SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
 - [Focus](#Focus)  (added 1.0.5)
 - [GetText](#GetText)  (added 1.0.5)
 - [SetText](#SetText)  (added 1.0.5)
-
+- [Handle](#Handle)  (added 1.0.6)
 
 ***
 
@@ -624,5 +624,21 @@ session.SetText("wnd[0]/usr/ctxtS_VKORG-LOW", "control text")
 
 session.SetText("wnd[0]/usr/ctxtS_VKORG-LOW", "cell value", "2, SUM_OPEN")
 
+```
+[back |](#class-extension)
+
+
+
+
+
+
+#### **Handle**
+--Method--
+
+```csharp
+/// Get Window Handle of session
+
+session.Handle()
+-> 52345
 ```
 [back |](#class-extension)
