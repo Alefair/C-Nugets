@@ -216,6 +216,8 @@ public static DateTime DateParse(this string date, string[] listFormat = null)
 "7/10/22".DateParse({"M/dd/yy", "dd.MM.yyyy", "MM/dd/yyyy"}) -> 07/10/2022 00:00:00
 ```
 
+<br><br>
+
 -----------------
 
 ## [*class* **DataExtended**](#DataExtended)
