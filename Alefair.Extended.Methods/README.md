@@ -54,7 +54,7 @@ public static bool Like(this string toSearch, string toFind, RegexOptions RegOpt
 
 ```
 
-<br><br>
+***
 
 #### **ContainsInList**
 ```csharp
@@ -71,7 +71,7 @@ public static bool ContainsInList(this string toSearch, List<string> currentList
 
 ```
 
-<br><br>
+***
 
 #### **ToDouble**
 ```csharp
@@ -89,7 +89,7 @@ public static double ToDouble(this string cdblString, int Count = -1)
 
 ```
 
-<br><br>
+***
 
 #### **ToDoubleStr**
 ```csharp
@@ -107,7 +107,7 @@ public static string ToDoubleStr(this string cdblString, string StringFormat = "
 
 ```
 
-<br><br>
+***
 
 #### **ToDecimal**
 ```csharp
@@ -126,7 +126,7 @@ public static decimal ToDecimal(this string decString, int Count = -1)
 ```
 
 
-<br><br>
+***
 
 #### **ToDecimalStr**
 ```csharp
@@ -145,7 +145,7 @@ public static string ToDecimalStr(this string decString, string StringFormat = "
 ```
 
 
-<br><br>
+***
 
 #### **GetSimilarity**
 ```csharp
@@ -162,7 +162,7 @@ public static Single GetSimilarity(this string toSearch, string toFind)
 
 ```
 
-<br><br>
+***
 
 #### **DictToString**
 ```csharp
@@ -181,7 +181,7 @@ public static string DictToString<TKey, TValue>(this IDictionary<TKey, TValue> d
 ```
 
 
-<br><br>
+***
 
 #### **DictToJson**
 ```csharp
@@ -200,7 +200,7 @@ public static JObject DictToJson<TKey, TValue>(this IDictionary<TKey, TValue> di
 ```
 
 
-<br><br>
+***
 
 #### **DateParse**
 ```csharp
@@ -216,7 +216,7 @@ public static DateTime DateParse(this string date, string[] listFormat = null)
 "7/10/22".DateParse({"M/dd/yy", "dd.MM.yyyy", "MM/dd/yyyy"}) -> 07/10/2022 00:00:00
 ```
 
-<br><br>
+***
 
 -----------------
 
@@ -229,7 +229,7 @@ public static DateTime DateParse(this string date, string[] listFormat = null)
 - [AppendCSV](#AppendCSV)
 
 
-<br><br>
+***
 
 #### **ReadCSV**
 ```csharp
@@ -253,7 +253,7 @@ dt = ReadCSV(sFileName);
 
 ```
 
-<br><br>
+***
 
 #### **WriteCSV**
 ```csharp
@@ -277,7 +277,7 @@ WriteCSV(sFileName);
 ```
 
 
-<br><br>
+***
 
 #### **AppendCSV**
 ```csharp
