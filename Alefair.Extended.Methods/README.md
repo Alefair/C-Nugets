@@ -5,13 +5,13 @@
 Extended Methods powered by Alefair
 ```
 
->Current version **[1.0.3](https://github.com/Alefair/C-Nugets/blob/main/Alefair.Extended.Methods/Packages/Alefair.Extended.Methods.1.0.3.nupkg)**
+>Current version **[1.0.4](https://github.com/Alefair/C-Nugets/blob/main/Alefair.Extended.Methods/Packages/Alefair.Extended.Methods.1.0.4.nupkg)**
 >
 
->[nuget](https://www.nuget.org/packages/Alefair.Extended.Methods/1.0.3) on https://www.nuget.org
+>[nuget](https://www.nuget.org/packages/Alefair.Extended.Methods/1.0.4) on https://www.nuget.org
 
 
-## [*class* **StringExtended**](#SAPAPI)
+## [*class* **StringExtended**](#StringExtended)
 
 ### Methods:
 
@@ -214,4 +214,85 @@ public static DateTime DateParse(this string date, string[] listFormat = null)
 
 "10.07.2022".DateParse()                                     -> 07/10/2022 00:00:00
 "7/10/22".DateParse({"M/dd/yy", "dd.MM.yyyy", "MM/dd/yyyy"}) -> 07/10/2022 00:00:00
+```
+
+-----------------
+
+## [*class* **DataExtended**](#DataExtended)
+
+### Methods:
+
+- [ReadCSV](#ReadCSV)
+- [WriteCSV](#WriteCSV)
+- [AppendCSV](#AppendCSV)
+
+
+<br><br>
+
+#### **ReadCSV**
+```csharp
+/// <summary>
+/// 
+/// </summary>
+/// <param name="FilePath"></param>
+/// <param name="DelimiterType"></param>
+/// <param name="Encoding"></param>
+/// <param name="HasHeaders"></param>
+/// <param name="IgnoreQuotes"></param>
+/// <returns></returns>
+/// <exception cref="ArgumentException"></exception>
+public static DataTable ReadCSV(string FilePath, Delimeter DelimiterType = Delimeter.Semicolon, string Encoding = "", bool HasHeaders = false, bool IgnoreQuotes = false)
+   
+sFileName = "C:\Temp\test.csv";
+
+dt = ReadCSV(sFileName);
+
+-> dt as DataTable
+
+```
+
+<br><br>
+
+#### **WriteCSV**
+```csharp
+/// <summary>
+/// 
+/// </summary>
+/// <param name="FilePath"></param>
+/// <param name="data"></param>
+/// <param name="DelimiterType"></param>
+/// <param name="Encoding"></param>
+/// <param name="HasHeaders"></param>
+/// <returns></returns>
+public static bool WriteCSV(string FilePath, DataTable data, Delimeter DelimiterType = Delimeter.Semicolon, string Encoding = "", bool HasHeaders = false)
+
+sFileName = "C:\Temp\test.csv";
+
+WriteCSV(sFileName);
+
+-> file csv
+
+```
+
+
+<br><br>
+
+#### **AppendCSV**
+```csharp
+/// <summary>
+/// 
+/// </summary>
+/// <param name="FilePath"></param>
+/// <param name="data"></param>
+/// <param name="DelimiterType"></param>
+/// <param name="Encoding"></param>
+/// <returns></returns>
+public static bool AppendCSV(string FilePath, DataTable data, Delimeter DelimiterType = Delimeter.Semicolon, string Encoding = "")
+
+sFileName = "C:\Temp\test.csv";
+
+WriteCSV(sFileName);
+
+-> file csv
+
 ```
