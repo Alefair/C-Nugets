@@ -293,7 +293,7 @@ public static bool AppendCSV(string FilePath, DataTable data, Delimeter Delimite
 
 sFileName = "C:\Temp\test.csv";
 
-WriteCSV(sFileName);
+AppendCSV(sFileName);
 
 -> file csv
 
