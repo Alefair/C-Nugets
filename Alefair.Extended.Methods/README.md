@@ -243,7 +243,7 @@ public static DateTime DateParse(this string date, string[] listFormat = null)
 /// <param name="IgnoreQuotes"></param>
 /// <returns></returns>
 /// <exception cref="ArgumentException"></exception>
-public static DataTable ReadCSV(string FilePath, Delimeter DelimiterType = Delimeter.Semicolon, string Encoding = "", bool HasHeaders = false, bool IgnoreQuotes = false)
+public static DataTable ReadCSV(string FilePath, Delimiter Delimiter = Delimiter.Semicolon, string Encoding = "", bool HasHeaders = false, bool IgnoreQuotes = false)
    
 sFileName = "C:\Temp\test.csv";
 
@@ -266,7 +266,7 @@ dt = ReadCSV(sFileName);
 /// <param name="Encoding"></param>
 /// <param name="HasHeaders"></param>
 /// <returns></returns>
-public static bool WriteCSV(string FilePath, DataTable data, Delimeter DelimiterType = Delimeter.Semicolon, string Encoding = "", bool HasHeaders = false)
+public static bool WriteCSV(string FilePath, DataTable data, Delimiter DelimiterType = Delimiter.Semicolon, string Encoding = "", bool HasHeaders = false)
 
 sFileName = "C:\Temp\test.csv";
 
@@ -289,7 +289,7 @@ WriteCSV(sFileName);
 /// <param name="DelimiterType"></param>
 /// <param name="Encoding"></param>
 /// <returns></returns>
-public static bool AppendCSV(string FilePath, DataTable data, Delimeter DelimiterType = Delimeter.Semicolon, string Encoding = "")
+public static bool AppendCSV(string FilePath, DataTable data, Delimiter DelimiterType = Delimiter.Semicolon, string Encoding = "")
 
 sFileName = "C:\Temp\test.csv";
 
