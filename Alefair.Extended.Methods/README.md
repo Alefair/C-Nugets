@@ -5,10 +5,10 @@
 Extended Methods powered by Alefair
 ```
 
->Current version **[1.0.4](https://github.com/Alefair/C-Nugets/blob/main/Alefair.Extended.Methods/Packages/Alefair.Extended.Methods.1.0.4.nupkg)**
+>Current version **[1.0.5](https://github.com/Alefair/C-Nugets/blob/main/Alefair.Extended.Methods/Packages/Alefair.Extended.Methods.1.0.5.nupkg)**
 >
 
->[nuget](https://www.nuget.org/packages/Alefair.Extended.Methods/1.0.4) on https://www.nuget.org
+>[nuget](https://www.nuget.org/packages/Alefair.Extended.Methods/1.0.5) on https://www.nuget.org
 
 
 ## [*class* **StringExtended**](#StringExtended)
