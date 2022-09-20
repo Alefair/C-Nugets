@@ -13,30 +13,33 @@ Extended Methods powered by Alefair
 ***
 
 *class* **StringExtended**
--[x] Like
--[x] ContainsInList
--[x] ToDouble
--[x] ToDoubleStr
--[x] ToDecimal
--[x] ToDecimalStr
--[x] GetSimilarity
--[x] DictToString
--[x] DictToJson
--[x] DateParse
--[x] Capitalize
+
+-[x]Like
+-[x]ContainsInList
+-[x]ToDouble
+-[x]ToDoubleStr
+-[x]ToDecimal
+-[x]ToDecimalStr
+-[x]GetSimilarity
+-[x]DictToString
+-[x]DictToJson
+-[x]DateParse
+-[x]Capitalize
 
 *class* **DataExtended** (added 1.0.5)
--[x] ReadCSV
--[x] WriteCSV
--[x] AppendCSV
+
+-[x]ReadCSV
+-[x]WriteCSV
+-[x]AppendCSV
 
 *class* **ProcessExtended** (added 1.0.6)
--[x] GetPid
--[x] Kill
--[x] GetWinHandle
--[x] GetMainWinHandle
--[x] GetWinTitle
--[x] GetProcess
+
+-[x]GetPid
+-[x]Kill
+-[x]GetWinHandle
+-[x]GetMainWinHandle
+-[x]GetWinTitle
+-[x]GetProcess
 
 ***
 
