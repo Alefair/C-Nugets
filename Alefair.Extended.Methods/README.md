@@ -5,10 +5,10 @@
 Extended Methods powered by Alefair
 ```
 
->Current version **[1.0.5](https://github.com/Alefair/C-Nugets/blob/main/Alefair.Extended.Methods/Packages/Alefair.Extended.Methods.1.0.5.nupkg)**
+>Current version **[1.0.6](https://github.com/Alefair/C-Nugets/blob/main/Alefair.Extended.Methods/Packages/Alefair.Extended.Methods.1.0.6.nupkg)**
 >
 
->[nuget](https://www.nuget.org/packages/Alefair.Extended.Methods/1.0.5) on https://www.nuget.org
+>[nuget](https://www.nuget.org/packages/Alefair.Extended.Methods/1.0.6) on https://www.nuget.org
 
 
 ## [*class* **StringExtended**](#StringExtended)
@@ -314,3 +314,153 @@ AppendCSV(sFileName);
 -> file csv
 
 ```
+
+-----------------
+
+## [*class* **ProcessExtended**](#ProcessExtended)
+
+### Methods:
+
+- [GetPid](#GetPid)
+- [Kill](#Kill)
+- [GetWinHandle](#GetWinHandle)
+- [GetMainWinHandle](#GetMainWinHandle)
+- [GetWinTitle](#GetWinTitle)
+- [GetProcess](#GetProcess)
+
+***
+
+#### **GetPid**
+```csharp
+/// <summary>
+/// 
+/// </summary>
+/// <param name="processname"></param>
+/// <param name="title"></param>
+/// <param name="handle"></param>
+/// <returns></returns>
+public static int GetPid(this string processname, string title = "", IntPtr? handle = null)
+   
+iPID = "notepad".GetPid()
+-> 12456
+
+iPID = "notepad".GetPid("unti*")
+-> 12456
+
+iPID = "notepad".GetPid("", 78451689)
+-> 12456
+
+```
+
+***
+
+#### **Kill**
+```csharp
+/// <summary>
+/// 
+/// </summary>
+/// <param name="processname"></param>
+/// <param name="title"></param>
+/// <param name="pid"></param>
+/// <returns></returns>
+/// <exception cref="ApplicationException"></exception>
+public static bool Kill(this string processname, string title = "", int pid = -1)
+   
+"notepad".Kill()
+-> true
+
+"notepad".Kill("untit*")
+-> true
+
+"notepad".Kill("", 12456)
+-> true
+
+```
+
+***
+
+
+#### **GetWinHandle**
+```csharp
+/// <summary>
+/// 
+/// </summary>
+/// <param name="processname"></param>
+/// <param name="title"></param>
+/// <returns></returns>
+public static IntPtr GetWinHandle(this string processname, string title = "")
+   
+hwnd = "notepad".GetWinHandle()
+-> 78451689
+
+hwnd = "notepad".GetWinHandle("untit*")
+-> 78451689
+
+```
+
+***
+
+#### **GetMainWinHandle**
+```csharp
+/// <summary>
+/// 
+/// </summary>
+/// <param name="processname"></param>
+/// <param name="title"></param>
+/// <returns></returns>
+public static IntPtr GetMainWinHandle(this string processname, string title = "")
+   
+hwnd = "notepad".GetMainWinHandle()
+-> 78451689
+
+hwnd = "notepad".GetMainWinHandle("untit*")
+-> 78451689
+
+```
+
+***
+
+
+#### **GetWinTitle**
+```csharp
+/// <summary>
+/// 
+/// </summary>
+/// <param name="processname"></param>
+/// <param name="pid"></param>
+/// <returns></returns>
+public static string GetWinTitle(this string processname, int pid = -1)
+   
+sTitle = "notepad".GetWinTitle()
+-> "Untitled - Notepad"
+
+sTitle = "notepad".GetWinTitle(12456)
+-> "Untitled - Notepad"
+
+```
+
+***
+
+#### **GetProcess**
+```csharp
+/// <summary>
+/// 
+/// </summary>
+/// <param name="processname"></param>
+/// <param name="title"></param>
+/// <param name="pid"></param>
+/// <returns></returns>
+public static Process GetProcess(this string processname, string title = "", int pid = -1)
+   
+sTitle = "notepad".GetProcess()
+-> Process <Notepad.exe, "Untitled - Notepad">
+
+sTitle = "notepad".GetProcess("untitl*")
+-> Process <Notepad.exe, "Untitled - Notepad">
+
+sTitle = "notepad".GetProcess("", 12456)
+-> Process <Notepad.exe, "Untitled - Notepad">
+
+```
+
+***
