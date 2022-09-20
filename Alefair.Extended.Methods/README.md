@@ -10,33 +10,37 @@ Extended Methods powered by Alefair
 
 >[nuget](https://www.nuget.org/packages/Alefair.Extended.Methods/1.0.6) on https://www.nuget.org
 
+***
+
+*class* **StringExtended**
+-[x] Like
+-[x] ContainsInList
+-[x] ToDouble
+-[x] ToDoubleStr
+-[x] ToDecimal
+-[x] ToDecimalStr
+-[x] GetSimilarity
+-[x] DictToString
+-[x] DictToJson
+-[x] DateParse
+-[x] Capitalize
+
+*class* **DataExtended** (added 1.0.5)
+-[x] ReadCSV
+-[x] WriteCSV
+-[x] AppendCSV
+
+*class* **ProcessExtended** (added 1.0.6)
+-[x] GetPid
+-[x] Kill
+-[x] GetWinHandle
+-[x] GetMainWinHandle
+-[x] GetWinTitle
+-[x] GetProcess
+
+***
 
 ## [*class* **StringExtended**](#StringExtended)
-
-### Methods:
-
-- [Like](#Like)
-- [ContainsInList](#ContainsInList)
-
-
-- [ToDouble](#ToDouble)
-- [ToDoubleStr](#ToDoubleStr)
-
-
-- [ToDecimal](#ToDecimal)
-- [ToDecimalStr](#ToDecimalStr)
-
-
-- [GetSimilarity](#GetSimilarity)
-
-
-- [DictToString](#DictToString)
-- [DictToJson](#DictToJson)
-
-
-- [DateParse](#DateParse)
-
-- [Capitalize](#Capitalize)
 
 ***
 
@@ -234,16 +238,8 @@ public static string Capitalize(this string s)
 
 ***
 
------------------
 
 ## [*class* **DataExtended**](#DataExtended)
-
-### Methods:
-
-- [ReadCSV](#ReadCSV)
-- [WriteCSV](#WriteCSV)
-- [AppendCSV](#AppendCSV)
-
 
 ***
 
@@ -318,15 +314,6 @@ AppendCSV(sFileName);
 -----------------
 
 ## [*class* **ProcessExtended**](#ProcessExtended)
-
-### Methods:
-
-- [GetPid](#GetPid)
-- [Kill](#Kill)
-- [GetWinHandle](#GetWinHandle)
-- [GetMainWinHandle](#GetMainWinHandle)
-- [GetWinTitle](#GetWinTitle)
-- [GetProcess](#GetProcess)
 
 ***
 
