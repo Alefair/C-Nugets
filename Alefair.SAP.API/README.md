@@ -5,10 +5,10 @@
 SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
 ```
 
->Current version **[1.0.6](https://github.com/Alefair/C-Nugets/blob/main/Alefair.SAP.API/Packages/Alefair.SAP.API.1.0.6.nupkg)**
+>Current version **[1.0.7](https://github.com/Alefair/C-Nugets/blob/main/Alefair.SAP.API/Packages/Alefair.SAP.API.1.0.7.nupkg)**
 >
 
->[nuget](https://www.nuget.org/packages/Alefair.SAP.API/1.0.6) on https://www.nuget.org
+>[nuget](https://www.nuget.org/packages/Alefair.SAP.API/1.0.7) on https://www.nuget.org
 
 ## [*class* **SAPAPI**](#SAPAPI)
 
@@ -35,7 +35,7 @@ SAP API based by Interop.SAPFEWSELib.dll  and  Interop.SapROTWr.dll
 - [GetSession](#GetSession)
 - [GetSessions](#GetSessions)
 - [GetListConnections](#GetListConnections) - Experimental Method(added 1.0.4)
-
+- [Kill](#Kill) (added 1.0.7)
 
 
 ## [*class* **SAPTABLE**](#SAPTABLE)
@@ -320,6 +320,19 @@ List<string> basenames = GetListConnections(int id = 1008, int btn = 59410);
 
 ![Choice](https://raw.githubusercontent.com/Alefair/C-Nugets/main/Alefair.SAP.API/Images/Choice.PNG)
 
+[back |](#class-sapapi)
+
+
+#### **Kill**
+--Method--
+
+```csharp
+/// Kill Saplogon
+/// 
+gui.Kill();
+
+-> true
+```
 [back |](#class-sapapi)
 
 
