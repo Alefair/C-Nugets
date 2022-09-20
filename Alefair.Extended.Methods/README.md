@@ -36,6 +36,8 @@ Extended Methods powered by Alefair
 
 - [DateParse](#DateParse)
 
+- [Capitalize](#Capitalize)
+
 ***
 
 #### **Like**
@@ -214,6 +216,20 @@ public static DateTime DateParse(this string date, string[] listFormat = null)
 
 "10.07.2022".DateParse()                                     -> 07/10/2022 00:00:00
 "7/10/22".DateParse({"M/dd/yy", "dd.MM.yyyy", "MM/dd/yyyy"}) -> 07/10/2022 00:00:00
+```
+
+***
+
+#### **Capitalize**
+```csharp
+/// <summary>
+/// 
+/// </summary>
+/// <param name="s"></param>
+/// <returns></returns>
+public static string Capitalize(this string s)
+
+"this text".Capitalize() -> "This text"
 ```
 
 ***
