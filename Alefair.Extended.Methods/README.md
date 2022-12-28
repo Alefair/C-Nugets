@@ -5,10 +5,10 @@
 Extended Methods powered by Alefair
 ```
 
->Current version **[1.0.6](https://github.com/Alefair/C-Nugets/blob/main/Alefair.Extended.Methods/Packages/Alefair.Extended.Methods.1.0.6.nupkg)**
+>Current version **[1.0.12](https://github.com/Alefair/C-Nugets/blob/main/Alefair.Extended.Methods/Packages/Alefair.Extended.Methods.1.0.12.nupkg)**
 >
 
->[nuget](https://www.nuget.org/packages/Alefair.Extended.Methods/1.0.6) on https://www.nuget.org
+>[nuget](https://www.nuget.org/packages/Alefair.Extended.Methods/1.0.12) on https://www.nuget.org
 
 ***
 
@@ -25,6 +25,8 @@ Extended Methods powered by Alefair
 - [x] DictToJson
 - [x] DateParse
 - [x] Capitalize
+- [x] ToFile
+- [x] Names
 
 *class* **DataExtended** (added 1.0.5)
 
@@ -40,6 +42,11 @@ Extended Methods powered by Alefair
 - [x] GetMainWinHandle
 - [x] GetWinTitle
 - [x] GetProcess
+
+*class* **MailExtended** (added 1.0.12)
+*use Microsoft.Office.Interop.Outlook*
+- [x] ReadDataFromMsg
+- [x] GetAttachmentsFromMsg
 
 ***
 
@@ -237,6 +244,42 @@ public static DateTime DateParse(this string date, string[] listFormat = null)
 public static string Capitalize(this string s)
 
 "this text".Capitalize() -> "This text"
+```
+
+***
+
+#### **ToFile**
+```csharp
+/// <summary>
+/// 
+/// </summary>
+/// <param name="Text"></param>
+/// <param name="Path"></param>
+/// <param name="Operation"></param>
+/// <returns></returns>
+public static bool ToFile(this string Text, string Path, FileOperation Operation = FileOperation.Append)
+
+"this text".ToFile("C:\test.txt") -> true
+```
+
+***
+
+#### **Names**
+```csharp
+/// <summary>
+/// 
+/// </summary>
+/// <param name="Columns"></param>
+/// <param name="Separator"></param>
+/// <returns></returns>
+public static string Names(this DataColumnCollection Columns, string Separator = ";")
+
+DataTable dt = new DataTable();
+dt.Columns.Add("Test");
+dt.Columns.Add("Tes2");
+dt.Columns.Add("Tes3");
+
+dt.Columns.Names -> "Test;Test2;Test3"
 ```
 
 ***
